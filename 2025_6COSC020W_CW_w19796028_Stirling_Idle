@@ -1,0 +1,118 @@
+w19796028_Stirling_Idle
+
+Part A – Application area review
+
+                                
+                                            How has AI been applied to Robotic Navigation?
+                                            
+Artificial Intelligence plays a central role in robotic navigation, enabling robots to perceive, interpret, and act within their environment. Navigation requires a robot to understand where it is, what surrounds it, and how to move safely and efficiently toward a goal. AI techniques provide the computational intelligence needed for these tasks, supporting robots across domains such as healthcare, logistics, manufacturing, agriculture, and search-and-rescue operations. This review examines key AI technologies used in robotic navigation and how they have been applied in practice. 
+
+There are six key AI technologies commonly applied to robotic navigation:
+
+.SLAM is one of the core AI algorithms in robotic navigation. It allows a robot to build a map of its surroundings while simultaneously determining its own position within that map. Without this capability, a robot cannot reliably navigate unknown environments. SLAM systems typically use sensors such as LiDAR, cameras, ultrasonic sensors, and IMUs to construct real-time spatial representations.
+
+Research from Middlebury College provides an accessible example of SLAM using a simple wheeled robot equipped with a camera and actuators. The robot identifies obstacles (mapping) and determines its orientation and distance relative to them (localisation). Modern SLAM variants include 2D LiDAR-based approaches (e.g., GMapping, Hector SLAM, Cartographer), monocular visual SLAM (e.g., ORB-SLAM, LSD-SLAM, DSO), and stereo-camera systems (e.g., RTAB-Map, S-PTAM). Comparative studies show that these approaches differ in accuracy, computational cost, and suitability for various environments, but all support autonomous navigation by enabling robots to map and localise without human assistance.
+
+.Computer vision enables robots to interpret visual information using AI-driven image processing and deep learning. Cameras combined with convolutional neural networks (CNNs) allow robots to detect obstacles, recognise objects, and understand dynamic changes in the environment. This is essential in contexts such as autonomous driving, where algorithms must continuously analyse roads, traffic, and pedestrians. By integrating AI-based perception, robots become more adaptable and capable of handling complex, real-world scenarios.
+
+.Path-planning algorithms determine the most optimal and efficient route for a robot to take while avoiding obstacles. Common
+examples include A*, Dijkstra’s algorithm, and Rapidly-Exploring Random Trees (RRT), all of which belong to the family of search
+algorithms. The A* search algorithm is one of the most important and widley used search path finding algorithms used. The A* Algorithm
+is mainly used for broad game and strategy based games, where its stability and quickness have been improved over time, however, there
+are many problems or areas where A* can fail as explained in 'A Systematic Literature Review of A* Pathfinding' by Daniel Foeada, Alifio
+Ghifaria, Marchel Budi Kusumaa, Novita Hanafiahb, Eric Gunawanb. A problem described within this article is that the A* algorithm might
+identify conflicting pathways between multi-agents, also, A* might find a path much quicker than uninformed search, but it may not
+decide that it is the shortest path/most optimal path. This article also suggests that through a study shows that A* algorithm wil only 
+show only 85% of the time it takes to give a result with the shortest path. 
+    
+.Reinforcement learning is a type of machine learning where an agent learns through interaction with its environment. By applying
+reinforcement learning, robots can enhance their decision-making capabilities and develop optimal navigation strategies through trial
+and error. Furthermore, as discussed in 'Reinforcement Learning' by 'R.S Sutton and A.G Barto' 'Camebridge, MA;MIT Press, 1998,
+Hardbound, $40,000.ISBN 0-262-19398-1' and reviewed by 'C.R Gallistel', this article on Reinforcement Learning descirbes it as a 'fusion
+of the trial and error "Law of effect" tradition in psychology , optimal control theory in engineering, the secondary reinforcement
+traditioin learning, and the use of decaying stimulus traces in, for example Hull's concept of a goal gradient and mmore recently
+Wagner's model of conditioning. these two experiments together create a fusion (Melding of data into one) has given researchers of
+Articifical Intelligence the ability to generate new computer algorithms that learn a policy that maximises the agent's long term return
+which is teh amoount of reward from the performance of a task. In addition, this article also has a part  which describes what a reward
+function is, which is "the objective feedback from the environment" and goes onto relating how the goal of an agent is associated 
+with the reward function which defines the goal of an agent in a given situation, an example of a reward function being used would be
+if the integer 1 would be used to associate a state of having moved all one's pieces off the board say in a chess game or backgamon game
+, while an integer of 0 could be used to associate with all other tstaes of the game, which mean all the states leading up to the
+winning state amd the ultimate goal of the agent is to maximise "net long-term reward" (In either chess or backgammon game, this would
+be the number of games won).
+    
+.As described in previous paragraphs or alluded to, Sensor fusion refers to combining data from multiple sensors so the robot perceives the environment as a single, unified picture. In the Book "An Introduction to Sensor Fusion" written by "Wilfried Elmenreich", he explains that 
+Sensor Fusion has various other names someone might refeer to it as, including; "Data Fusion", "Information fusion", "Multi-sensor data fusion" and "multi-sensor integration" which are all techniques which have been used to derive data from mulitple information sourcesand then "fuse" them together.In addition, it exaplains exactly what Sensor Fusion is in the chapter called "Principles of Sensor Fusion", which syas that Sensor Fusion is the combining of sensory data (content the agent percives trhough its sensors) "such that the resulting information is in some sense better that would be possible then when the sources where used individualy", so, the melding of daya into one, so that, that data can be used more efficiently. Furthermore, it also goes on to explain that a system which utilises a sensor fusion will expect a number of benefits over single sensor systems and where a physical sensor measurment genrally suffers from 5 problems which are; Sensor Deprivation, Limited spatial coverage, Limited Temporal coverage, Imprecision and Uncertainty. An example would include a car which uses a parking sensor on the rear of the car to assist in reversing into a space, the sensor can only keep track of obstacles that are behind it, not obstacles which are at either side of the car, which means the sensor has limited spatial coverage. Also, the sensor might have an update time of one second which is a limited temporal coverage that is significant to the humandriver, furthermore, the sensor doesn's actually know the distnace between it's self and the obstacle, it could be 2cm off the actual distance to the object. in addition, uncertainty arises when an object si soemthing small like a motorbike, cat, dog or a fence or similar, and the driver cannot be sure if the sensor beam hits the object and delivers a correct measurement witht he specified precisionor if the sensorbeam misses the object, which results in giving delivering a valuesuggesting a much different distance then that it actaully is. 
+    
+.AI robots are increasingly capable of processing data locally rather than relying on cloud-based systems. Using edge computing
+reduces latency and allows robots to make real-time decisions crucial for navigation. Edge computing provides several benefits:
+    
+    1.)Lower latency: Faster data processing improves real-time AI performance.
+    
+    2.)Improved security: Data processed locally is less vulnerable to external breaches.
+    
+    3.)Reduced cost: Storing and processing data on the robot is cheaper than continuous cloud communication.
+    
+    4.) Wider reach: Edge computing allows robots to function without needing internet access.
+
+
+
+Conclusion of Technologies:
+
+     AI enhances a robot’s ability to perform real-time navigation using many algorithms and techniques such as SLAM, computer vision, path
+     planning, reinforcement learning, sensor fusion, and edge computing. Together, these approaches allow robots to make informed decisions
+     about their environment by detecting obstacles and navigating around them effectively.
+
+
+AI APPLICATIONS USED IN ROBOTIC NAVIGATION 
+
+AI has several real-world applications in robotic navigation, including healthcare, manufacturing, agriculture, and logistics:
+
+.AI-powered robots can assist disabled individuals with movement and can navigate hospital hallways to deliver supplies and equipment. In addition, an example of using a robot in the Health Care sector would be the Da Vinci system, which is a surgical robot which is actaully operated remotley and acts as a guidancetool to simutaniously provide information and keep the surgeonon the target (help assist the surgeon by keeping what they are working on more stable and accurate). The Da Vinci system robot has been utilised by many Health Care bodies world wide and has resulted in a large body of robots being used for surgical applicationfor use in the medical domain. Furthermore, robots have been utilised for care giving of paitents, n example being the robot rIBA which was designed with the appearanceof a giant teddybear to life and transfer patients from a bed to a wheelchair and back. The caregiver is able to instruct the robot through verbal commands and tactile guidance and where the desired motion of the robot is set by directly touching the robot on the part related to the motion. Furthermore, there is a similar robot called RoNA whom executes the same task, but is instead controlled by the operator through an external GUI. The last example would be a robot who was designed by "Chaudhary" in 2021 called Baymax which also serves as a personal companion for general Health Care. 
+    
+.AI-driven tractors can autonomously navigate farms to optimise crop management. Robots can also explore dangerous forest terrain, mapping environments that may be too risky for humans. However, if a farmer does not utilise AI to assist in farming, then they could
+produce many risks including; suffer from; more time consuming and requires more effort to prepare and plan land, irrigation and seed
+sowing, Involves more human resources for handlinghe various agricultural processes, Lack of accurate information on weather, soil
+conditions, and use of fertilizers, It willtake mroe time and effort to monitor the health of crops and any diseases, traditional
+spraying of pesticides affects the health of the farmers as well as reduces crop productivity, old ways of crop cutting and segmentation
+of healthy crops and fruits are tedious tasks &  any poor practices in storing harvetsed food led to its degradation. 
+    
+.AI robots can operate in environments that are extremely hazardous for humans. They can detect survivors, navigate debris, and use
+onboard cameras to locate missing individuals in dangerous situations. Furthermore, in the academic book written John G. Blitch, called "Artificial Intelligence Technologies for Robot Assisted Urban Search and Rescue", it has a subsection called "Confined Workspace", which explains that survivors who had suffered a structual collapse (Collapsed building or similar) are most often found in void spaces which are created by partial faliure of support members and where these void spaces can vary in size, location and volume which had been exstensivley indeicated in the 1995 O'Cornell, 1993 which was a situation which creatd voids which could be anywhere from 4 inches to 5 ft in height. It took a lot of effort to search these voids which lied at the heart of the USAR. It also goes onto expalin that it is "Absalutley essentia for crises site managers to identify potential voids and survior desities in order to allocate rescue assets effectively for work in confined spaces". This is where Robots whome utilise AI come in, they are better equiped to deal with challanging situations than humans are because they dont think in a biased way, instead they think in a logical way in which they are programmed to.  
+
+
+
+References: 
+Blitch, J.G. (Year). Artificial Intelligence Technologies for Robot Assisted Urban Search and Rescue. [Book reference].
+
+Chaudhary, (2021). Baymax: AI Companion Robot for Health Care. [Online]. Available at: [insert full URL if available] (Accessed: 28 November 2025).
+
+Elmenreich, W. (2007). An Introduction to Sensor Fusion. [Book]. [Publisher].
+
+Foeada, D., Ghifaria, A., Kusuma, M.B., Hanafiah, N. & Gunawan, E. (Year). ‘A Systematic Literature Review of A* Pathfinding’, [Journal Name], [Volume(Issue)], pp. [pages]. doi:[insert DOI if available].
+
+Gallistel, C.R. (1998). Review of Sutton, R.S. & Barto, A.G., Reinforcement Learning, Cambridge, MA: MIT Press. [Journal/Review reference].
+
+Middlebury College (Year). An Introduction to Robot SLAM: Simultaneous Localization And Mapping. [Online]. Available at: https://middlebury.figshare.com/articles/thesis/An_Introduction_to_Robot_SLAM_Simultaneous_Localization_And_Mapping_/21537405?file=38174607
+ (Accessed: 28 November 2025).
+
+NVIDIA (n.d.) Edge Computing. [Online]. Available at: https://www.nvidia.com/en-gb/edge-computing/
+ (Accessed: 28 November 2025).
+
+NVIDIA (n.d.) Autonomous Machines. [Online]. Available at: https://www.nvidia.com/en-gb/autonomous-machines/
+ (Accessed: 28 November 2025).
+
+ScienceDirect (2021). ‘[Article Title]’, [Journal Name], [Volume(Issue)], pp. [pages]. Available at: https://www.sciencedirect.com/science/article/pii/S1877050921000399
+ (Accessed: 28 November 2025).
+
+ScienceDirect (2023). ‘[Article Title]’, [Journal Name], [Volume(Issue)], pp. [pages]. Available at: https://www.sciencedirect.com/science/article/pii/S2667318523000016
+ (Accessed: 28 November 2025).
+
+ScienceDirect (1996). ‘[Article Title]’, [Journal Name], [Volume(Issue)], pp. [pages]. Available at: https://www.sciencedirect.com/science/article/pii/0957417496000383
+ (Accessed: 28 November 2025).
+
+Think Robotics (n.d.). AI Robot Navigation: The Future of Autonomous Movement. [Online]. Available at: https://thinkrobotics.com/blogs/learn/ai-robot-navigation-the-future-of-autonomous-movement#:~:text=AI%20robot%20navigation%20refers%20to,navigate%20obstacles%20without%20human%20intervention
+ (Accessed: 28 November 2025).
+
+Frontiers in Robotics and AI (2022). ‘[Article Title]’, Frontiers in Robotics and AI, [Volume(Issue)], pp. [pages]. Available at: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2022.813843/full
+ (Accessed: 28 November 2025).
